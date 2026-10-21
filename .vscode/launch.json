@@ -2,7 +2,21 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Run SkyAtlas",
+      "name": "Run Streamlit UI",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "streamlit",
+      "args": [
+        "run",
+        "${workspaceFolder}/src/sky_atlas/ui/app.py"
+      ],
+      "env": {
+        "PYTHONPATH": "${workspaceFolder}/src"
+      },
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "Run CLI Test",
       "type": "debugpy",
       "request": "launch",
       "program": "${workspaceFolder}/src/sky_atlas/main.py",
